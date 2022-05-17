@@ -45,7 +45,7 @@ def updatetraitementcsgo(request, id):
          CSGO = pform.save(commit=False)
          CSGO.id = id
          CSGO.save()
-         return HttpResponseRedirect("/csgo/accueilcsgo")
+         return HttpResponseRedirect("/csgo/affichecsgo")
      else:
          return render(request, "csgo/formulairecsgo.html", {"form": pform, "id": id})
 
@@ -90,7 +90,7 @@ def traitementmajor(request):
      pForm = MajorForm(request.POST)
      if pForm.is_valid():
          Major = pForm.save()
-         return HttpResponseRedirect(f"/csgo/affichemajor/{Major.id}/")
+         return HttpResponseRedirect(f"/csgo/affichemajor/")
      else:
          return render(request, 'Major/traitementmajor.html', {'form': pForm})
 
@@ -107,7 +107,7 @@ def updatetraitementmajor(request, id):
          Major = pform.save(commit=False)
          Major.id = id
          Major.save()
-         return HttpResponseRedirect("/csgo/")
+         return HttpResponseRedirect("/csgo/affichemajor")
      else:
          return render(request, "Major/formulairemajor.html", {"form": pform, "id": id})
 
@@ -115,6 +115,6 @@ def updatetraitementmajor(request, id):
 def deletemajor(request, id):
      major = models.Major.objects.get(pk=id)
      major.delete()
-     return HttpResponseRedirect("/csgo/accueilmajor")
+     return HttpResponseRedirect("/csgo/affichemajor")
 
 
