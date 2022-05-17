@@ -85,17 +85,17 @@ td{
     margin-top: 10px;
     color: white;
 	float: left;
-	margin-left: 20%;
-    padding: 15px;
+	margin-left: 5%;
+    padding: 5px;
 	height: fit-content;
 }
 
 .container h2 a{
 	text-decoration: none;
 	color: #551A8B;
-	margin-left: 25px;
+	margin-left: 5px;
 	background-color: #101634;
-	padding: 4px 4px 4px 4px;
+	padding: 3px 3px 3px 3px;
 	font-size: medium;
 	font-weight: 500;
 }
@@ -106,8 +106,8 @@ td{
 }
 
 .container li,input,select{
-    float: right;
+    float: left;
 	min-width: 160px;
-    margin-right: 38px;
+    margin-right: 10px;
     margin-top: 5px;
 }
