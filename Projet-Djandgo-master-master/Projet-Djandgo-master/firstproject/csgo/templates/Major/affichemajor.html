@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title> ajout d'un MVP </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'csgo.css' %}">
+</head>
+<body>
+<div id="Titre">
+            <h1> Les MVPS </h1>
+            <p><nav>
+                <a href="/csgo/accueilcsgo/"> Accueil </a>
+                <a href="/csgo/affichecsgo"> Les Majors</a>
+            </nav>
+        </div>
+<table>
+                <thead>
+                    <tr>
+                    <th scope="col">Tournoi</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Maps Jouées</th>
+                    <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for l in allmvp %}
+                    <tr scope="row">
+                        <td> {{ l.tournoi}} </td>
+                        <td> {{ l.Nom}} </td>
+                        <td> {{ l.Maps_Jouées }} </td>
+                        <td> {{ l.Rating }} </td>
+                        <td> <a href="/csgo/updatemajor/{{l.id}}/"> update </a> </td>
+                        <td> <a href="/csgo/deletemajor/{{l.id}}/"> delete </a> </td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+<a href ="/csgo/formulairemajor/"> Ajouter un MVP </a>
+</body>
+</html>

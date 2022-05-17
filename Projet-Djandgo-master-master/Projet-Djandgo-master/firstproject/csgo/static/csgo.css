@@ -1,0 +1,115 @@
+body{
+    background-image : url(Csgo.jpg);
+    background-size : cover;
+    margin : 0px;
+    color : whitesmoke;
+}
+
+
+
+
+#Titre
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#Titre
+{
+    width: 100%;
+    background-color : slategrey;
+	float : center;
+	margin-left : 0%;
+    margin-top : 0%;
+    text-align: center;
+	font-size :15px;
+    color : whitesmoke;
+
+}
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+nav {
+    display: table;
+    width : 100%;
+
+}
+nav > a {
+    display: table-cell;
+    width : 25%;
+    text-align: center;
+    border: 5px;
+    background-color : slategrey;
+    padding: 10px 0px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+.conteneur{
+  margin: 0px 20px;
+  height: 1500px;
+}
+
+@media all and (max-width: 1024px)
+{
+    section
+    {
+        display: block;
+        width: auto;
+    }
+
+    #Titre
+    {
+        width: auto;
+    }
+
+}
+th{
+    border: 1px solid #333;
+    background-color: rgb(192, 190, 190);
+    color: black;
+    width: 10%;
+}
+
+td{
+    background-color: rgba(22, 22, 22, 0.95);
+    color: #ce8404;
+    padding: 1px 5px 1px 5px;
+    width: 10%;
+}
+
+.container{
+    margin-top: 10px;
+    color: white;
+	float: left;
+	margin-left: 20%;
+    padding: 15px;
+	height: fit-content;
+}
+
+.container h2 a{
+	text-decoration: none;
+	color: #551A8B;
+	margin-left: 25px;
+	background-color: #101634;
+	padding: 4px 4px 4px 4px;
+	font-size: medium;
+	font-weight: 500;
+}
+
+.container li{
+    height: 50px;
+    width: 500px;
+}
+
+.container li,input,select{
+    float: right;
+	min-width: 160px;
+    margin-right: 38px;
+    margin-top: 5px;
+}

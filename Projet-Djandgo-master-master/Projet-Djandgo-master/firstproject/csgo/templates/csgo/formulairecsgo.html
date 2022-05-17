@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>mon formulaire</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'csgo.css' %}">
+</head>
+<body>
+
+<div class="container">
+        {% if id != None %}
+            <h1> Modifier les informations du Major --{{id}}--</h1>
+            <form action="/csgo/updatetraitementcsgo/{{id}}/" method="POST"/>
+        {% else %}
+            <h1> Saisie d'un nouveau Major </h1>
+            <form action="/csgo/traitementcsgo/" method="POST">
+        {% endif %}
+
+        {% csrf_token %}
+        {{ form.as_ul }}
+            <input type="submit" value="Ajouter le Major"\>
+    </form>
+        </div>
+</body>
+</html>

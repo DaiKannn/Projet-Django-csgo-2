@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title> Les Majors </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'csgo.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+<div id="Titre">
+            <h1> Les Majors </h1>
+            <p><nav>
+                <a href="/csgo/accueilcsgo/"> Accueil </a>
+                <a href="/csgo/accueilmajor"> Les MVPS</a>
+            </nav>
+        </div>
+<table>
+                <thead>
+                    <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Lieu</th>
+                    <th scope="col">Date début</th>
+                    <th scope="col">Date fin</th>
+                    <th scope="col">Nombre équipe</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Résultat</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for l in allmajor %}
+                    <tr scope="row">
+                        <td> {{ l.Nom_du_Major }} </td>
+                        <td> {{ l.Lieu }} </td>
+                        <td> {{ l.date_debut }} </td>
+                        <td> {{ l.date_fin }} </td>
+                        <td> {{ l.nombres_equipes }} </td>
+                        <td> {{ l.prix }} </td>
+                        <td> {{ l.resultat }} </td>
+                        <td> <a href="/csgo/updatecsgo/{{l.id}}/"> update </a> </td>
+                        <td> <a href="/csgo/deletecsgo/{{l.id}}/"> delete </a> </td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+<ul>
+    <a href ="/csgo/formulairecsgo/"> Ajouter un Major </a>
+    </ul>
+</body>
+</html>
